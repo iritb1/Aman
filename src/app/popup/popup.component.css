@@ -1,0 +1,22 @@
+.popup {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+h3 {
+    margin-top: 5vh;
+    font-size: 2rem;
+}
+
+.close-container {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.close-btn {
+    display: inline-block;
+    font-size: 1.25rem;
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+}

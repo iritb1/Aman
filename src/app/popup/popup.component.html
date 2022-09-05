@@ -1,0 +1,24 @@
+<div mat-dialog-content>
+  <div class="popup">
+    <div *ngFor="let attribute of data.joke | keyvalue" class="joke-info">
+      <div *ngIf="attribute.key != 'flags'">
+        <b>{{ attribute.key }}</b
+        >: {{ attribute.value }}
+      </div>
+    </div>
+  </div>
+  <h3>Suggested Jokes:</h3>
+  <div
+    *ngIf="data.threeRandomJokes && data.threeRandomJokes.length > 0"
+    class="more-jokes"
+  >
+    <div *ngFor="let item of data.threeRandomJokes">
+      <div *ngFor="let attribute of item | keyvalue">
+        <b>{{ attribute.key }}: </b>{{ attribute.value }}
+      </div>
+    </div>
+  </div>
+  <div class="close-container">
+    <button (click)="closeDialog()" class="close-btn">close</button>
+  </div>
+</div>
